@@ -95,6 +95,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Neural style transfer
     - Changes the style of an image using another image.
 - One of the challenges of computer vision problem that images can be so large and we want a fast and accurate algorithm to work with that.
+  - ![](Images/many_features.PNG)
   - For example, a `1000x1000` image will represent 3 million feature/input to the full connected neural network. If the following hidden layer contains 1000, then we will want to learn weights of the shape `[1000, 3 million]` which is 3 billion parameter only in the first layer and thats so computationally expensive!
 - One of the solutions is to build this using **convolution layers** instead of the **fully connected layers**.
 
