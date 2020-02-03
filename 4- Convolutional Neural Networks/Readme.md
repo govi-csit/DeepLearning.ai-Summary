@@ -105,6 +105,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - The convolution operation is one of the fundamentals blocks of a CNN. One of the examples about convolution is the image edge detection operation.
 - Early layers of CNN might detect edges then the middle layers will detect parts of objects and the later layers will put the these parts together to produce an output.
 - In an image we can detect vertical edges, horizontal edges, or full edge detector.
+![](Images/vertical_horizontal_eges.PNG)
 - Vertical edge detection:
   - An example of convolution operation to detect vertical edges:
     - ![](Images/01.png)
