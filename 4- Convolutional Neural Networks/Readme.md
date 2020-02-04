@@ -150,8 +150,9 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - The convolution operation shrinks the matrix if f>1.
 - We want to apply convolution operation multiple times, but if the image shrinks we will lose a lot of data on this process. Also the edges pixels are used less than other pixels in an image.
 - So the problems with convolutions are:
-  - Shrinks output.
-  - throwing away a lot of information that are in the edges.
+  - **Shrinks output.**
+  - **Throwing away a lot of information that are in the edges.**
+    ![](Images/convolution_problems.PNG)
 - To solve these problems we can pad the input image before convolution by adding some rows and columns to it. We will call the padding amount `P` the number of row/columns that we will insert in top, bottom, left and right of the image.
 - In almost all the cases the padding values are zeros.
 - The general rule now,  if a matrix `nxn` is convolved with `fxf` filter/kernel and padding `p` give us `n+2p-f+1,n+2p-f+1` matrix. 
