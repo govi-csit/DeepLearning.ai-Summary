@@ -119,6 +119,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
       ![](Images/vertical_edge.PNG)
       ![](Images/find_vertical_edge.PNG)
   - If we applied this filter to a white region followed by a dark region, it should find the edges in between the two colors as a positive value. But if we applied the same filter to a dark region followed by a white region it will give us negative values. To solve this we can use the abs function to make it positive.
+  ![](Images/transition.PNG)
 - Horizontal edge detection
   - Filter would be like this
 
