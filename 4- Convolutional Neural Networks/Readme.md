@@ -122,16 +122,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   ![](Images/transition.PNG)
 - Vertical and Horizontal edge detectors
   ![](Images/horizontal_vertical_filters.PNG)
-- Horizontal edge detection
-  - Filter would be like this
 
-    ```
-    1	1	1
-    0	0	0
-    -1	-1	-1
-    ```
-
-- There are a lot of ways we can put number inside the horizontal or vertical edge detections. For example here are the vertical **Sobel** filter (The idea is taking care of the middle row):
+- Historically in computer vision literature, there was fair amount of debut about what is the best set of numbers to use? There are a lot of ways we can put number inside the horizontal or vertical edge detections. For example here is the vertical **Sobel** filter (The advantage is it puts a little bit more weight to the central row/pixels which makes it may be a little bit more robust)
 
   ```
   1	0	-1
@@ -146,7 +138,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   10	0	-10
   3	0	-3
   ```
-
+  - ![](Images/various_vertical_edge_detectors.PNG)
 - What we learned in the deep learning is that we don't need to hand craft these numbers, we can treat them as weights and then learn them. It can learn horizontal, vertical, angled, or any edge type automatically rather than getting them by hand.
 
 ### Padding
