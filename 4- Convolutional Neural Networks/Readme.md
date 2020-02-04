@@ -139,7 +139,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   3	0	-3
   ```
   - ![](Images/various_vertical_edge_detectors.PNG)
-- What we learned in the deep learning is that we don't need to hand craft these numbers, we can treat them as weights and then learn them. It can learn horizontal, vertical, angled, or any edge type automatically rather than getting them by hand.
+- What we learned in the deep learning is that we don't need to hand craft these numbers, instead we can treat them as parameters(similart to weights in NN) and then learn them using back propgation. It can learn horizontal, vertical, angled, or any edge type automatically rather than getting them by hand. So we need to treat the edge detectors as parameters so that back propgation choose to learn/finds the best values
 
 ### Padding
 
