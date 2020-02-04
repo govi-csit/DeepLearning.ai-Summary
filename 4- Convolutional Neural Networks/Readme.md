@@ -118,7 +118,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - The vertical edge detection filter will find a `3x3` place in an image where there are a bright region(pixels) followed by a dark region(pixels).
       ![](Images/vertical_edge.PNG)
       ![](Images/find_vertical_edge.PNG)
-  - If we applied this filter to a white region followed by a dark region, it should find the edges in between the two colors as a positive value. But if we applied the same filter to a dark region followed by a white region it will give us negative values. To solve this we can use the abs function to make it positive.
+  - If we applied this filter to a white region followed by a dark region, it should find the edges in between the two colors as a positive value. But if we applied the same filter to a dark region followed by a white region it will give us negative values. To solve this we can use the **abs function** to make it positive.
   ![](Images/transition.PNG)
 - Vertical and Horizontal edge detectors
   ![](Images/horizontal_vertical_filters.PNG)
