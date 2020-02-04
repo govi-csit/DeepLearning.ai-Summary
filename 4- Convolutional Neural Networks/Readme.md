@@ -175,9 +175,23 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 - When we are making the convolution operation we used `S` to tell us the number of pixels we will jump when we are convolving filter/kernel. The last examples we described S was 1.
 
+  ![](Images/first_first_stride.PNG)
+  
+  ![](Images/first_second_stride.PNG)
+  
+  ![](Images/first_third_stride.PNG)
+  
+  ![](Images/second_first_stride.PNG)
+  
+  ![](Images/third_third_stride.PNG)
+
 - Now the general rule are:
   -  if a matrix `nxn` is convolved with `fxf` filter/kernel and padding `p` and stride `s` it give us `(n+2p-f)/s + 1,(n+2p-f)/s + 1` matrix. 
-
+    
+    ![](Images/stride_conv_cal.PNG)
+    
+    ![](Images/stride_conv_cal_rule.PNG)
+    
 - In case `(n+2p-f)/s + 1` is fraction we can take **floor** of this value.
 
 - In math textbooks the conv operation is filpping the filter before using it. What we were doing is called cross-correlation operation but the state of art of deep learning is using this as conv operation.
