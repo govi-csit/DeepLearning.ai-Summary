@@ -219,6 +219,25 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - 10 Filters: `3x3x3`
   - Result image: `4x4x10`
   - In the last result p=0, s=1
+    
+    ![](Images/3d_conv.PNG)
+    
+    ![](Images/3d_conv_initial.PNG)
+    
+    ![](Images/3d_conv_first_first.PNG)
+    
+    ![](Images/3d_conv_first_second.PNG)
+    
+    ![](Images/3d_conv_first_third.PNG)
+    
+    ![](Images/3d_conv_four_four.PNG)
+    
+    ![](Images/3d_conv_second_first.PNG)
+    
+    ![](Images/3d_conv_four_four.PNG)
+    
+    ![](Images/3d_conv_final.PNG)    
+    
 
 ### One Layer of a Convolutional Network
 
