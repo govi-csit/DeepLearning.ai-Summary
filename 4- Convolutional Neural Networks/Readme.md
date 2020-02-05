@@ -288,7 +288,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   Weights: f[l] * f[l] * nc[l-1] * nc[l]
   bias:  (1, 1, 1, nc[l])
   ```
-
+  ![](Images/notation.PNG)
+  
 ### A simple convolution network example
 
 - Lets build a big example.
