@@ -233,10 +233,10 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     ![](Images/3d_conv_final.PNG) 
     
 - Hint the output here is only 2D.
-- We can use multiple filters to detect multiple features or edges. Example.
+- We can use multiple filters to detect multiple features or edges. Eg: we are applying two filters, one is for detecting horizontal edges and other is for detecting vertical edges.
   - Input image: `6x6x3`
-  - 10 Filters: `3x3x3`
-  - Result image: `4x4x10`
+  - 2 Filters: `3x3x3`
+  - Result image: `4x4x2`
   - In the last result p=0, s=1
     
     ![](Images/multiple_filters.PNG)
