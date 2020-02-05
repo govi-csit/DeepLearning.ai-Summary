@@ -262,6 +262,11 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   
 - Here **input image(R,G,B pixels) are similar to inputs** and **filters are similart to weights** in NN.This example forms a layer in the CNN.
 - Hint: no matter the size of the input, the number of the parameters is same if filter size is same. That makes it less prone to overfitting.
+
+  ![](Images/parameters_count1.PNG)
+
+  ![](Images/parameters_count2.PNG)
+
 - Here are some notations we will use. If layer l is a conv layer:
 
   ```
