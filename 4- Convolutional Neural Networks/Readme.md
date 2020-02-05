@@ -311,8 +311,11 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - `number of filters = 40`
     - The output are `a3 = 7x7x40`
       - `n3 = 7`, `nc3 = 40`
-  - Forth layer (Fully connected Softmax)
+  - Forth layer (Fully connected Softmax/Regression unit)
     - `a3 = 7x7x40 = 1960`  as a vector..
+    
+      ![](Images/convnet_example.PNG)
+    
 - In the last example you seen that the image are getting smaller after each layer and thats the trend now.
 - Types of layer in a convolutional network:
   - Convolution. 		`#Conv`
