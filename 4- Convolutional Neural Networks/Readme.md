@@ -327,10 +327,10 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 ### Pooling layers
 
 - Other than the conv layers, CNNs often uses pooling layers to reduce the size of the inputs, speed up computation, and to make some of the features it detects more robust.
-- Max pooling Eg : The numbers in output / right side grid can be computed by taking maximum number in region formed by `f, s and p`
-   - ![](Images/max_pooling.PNG)
-  
-  - This example has `f = 2`, `s = 2`, and `p = 0` hyperparameters
+- Max pooling Eg : The numbers in output / right side grid can be computed by taking maximum number in region formed by `f, s and p`. The below example has `f = 2`, `s = 2`, and `p = 0` hyperparameters
+
+   ![](Images/max_pooling.PNG)
+ 
 - The max pooling is saying, if the feature is detected anywhere in this filter then keep a high number. But the main reason why people are using pooling because its works well in practice and reduce computations.
 - Max pooling has no parameters to learn.
 - Example of Max pooling on 3D input:
