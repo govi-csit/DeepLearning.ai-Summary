@@ -213,14 +213,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Filter: `3x3x3`
   - Result image: `4x4x1`
   - In the last result p=0, s=1
-- Hint the output here is only 2D.
-- We can use multiple filters to detect multiple features or edges. Example.
-  - Input image: `6x6x3`
-  - 10 Filters: `3x3x3`
-  - Result image: `4x4x10`
-  - In the last result p=0, s=1
     
-    ![](Images/3d_conv.PNG)
+     ![](Images/3d_conv.PNG)
     
     ![](Images/3d_conv_initial.PNG)
     
@@ -236,7 +230,14 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     
     ![](Images/3d_conv_four_four.PNG)
     
-    ![](Images/3d_conv_final.PNG)    
+    ![](Images/3d_conv_final.PNG) 
+    
+- Hint the output here is only 2D.
+- We can use multiple filters to detect multiple features or edges. Example.
+  - Input image: `6x6x3`
+  - 10 Filters: `3x3x3`
+  - Result image: `4x4x10`
+  - In the last result p=0, s=1
     
 
 ### One Layer of a Convolutional Network
