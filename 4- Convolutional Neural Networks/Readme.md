@@ -239,6 +239,11 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Result image: `4x4x10`
   - In the last result p=0, s=1
     
+    ![](Images/multiple_filters.PNG)
+    
+    ![](Images/multiple_filters_first.PNG)
+    
+    ![](Images/multiple_filters_second.PNG)
 
 ### One Layer of a Convolutional Network
 
