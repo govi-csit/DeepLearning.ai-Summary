@@ -318,9 +318,11 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     
 - **Note:** Typicall we start with larger input image(lets say HxW=39x39), and the height(H) and width(W) stay same for a while and gradually trend down / gets smaller after each layer(as we go in deeper in NN) whereas number of channels will be increase. Refere above screenshot for reference.
 - Types of layer in a convolutional network:
-  - Convolution. 		`#Conv`
-  - Pooling      `#Pool`
-  - Fully connected     `#FC`
+  - Convolution layer; often denoted as `Conv`
+  - Pooling layer; often denoted as `POOL`
+  - Fully connected layer; often denoted as `FC`
+  
+  ![](Images/conv_layer_types.PNG)
 
 ### Pooling layers
 
