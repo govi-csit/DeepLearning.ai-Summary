@@ -316,7 +316,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     
       ![](Images/convnet_example.PNG)
     
-- In the last example you seen that the image are getting smaller after each layer and thats the trend now.
+- **Note:** Typicall we start with larger input image(lets say HxW=39x39), and the height(H) and width(W) stay the same for a while and gradually trend down / gets smaller after each layer(as we go in deeper in NN) as shown in above screenshot.
 - Types of layer in a convolutional network:
   - Convolution. 		`#Conv`
   - Pooling      `#Pool`
