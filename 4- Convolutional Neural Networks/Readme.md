@@ -260,7 +260,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     
     ![](Images/one_layer_conv2.PNG)
   
-- The last example forms a layer in the CNN.
+- Here **input image(R,G,B pixels) are similar to inputs** and **filters are similart to weights** in NN.This example forms a layer in the CNN.
 - Hint: no matter the size of the input, the number of the parameters is same if filter size is same. That makes it less prone to overfitting.
 - Here are some notations we will use. If layer l is a conv layer:
 
