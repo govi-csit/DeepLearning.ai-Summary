@@ -255,6 +255,11 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Apply RELU will get us: `4x4x10` image                `#A1 = RELU(W1a0 + b)`
   - In the last result p=0, s=1
   - Hint number of parameters here are: `(3x3x3x10) + 10 = 280`
+  
+    ![](Images/one_layer_conv1.PNG)
+    
+    ![](Images/one_layer_conv2.PNG)
+  
 - The last example forms a layer in the CNN.
 - Hint: no matter the size of the input, the number of the parameters is same if filter size is same. That makes it less prone to overfitting.
 - Here are some notations we will use. If layer l is a conv layer:
