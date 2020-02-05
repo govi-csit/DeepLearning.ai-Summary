@@ -357,6 +357,9 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     ![](Images/maxpool_n_channels.PNG)
     
 - Average pooling is taking the averages of the values instead of taking the max values.
+  
+    ![](Images/avg_pooling.PNG)
+  
 - Max pooling is used more often than average pooling in practice.
 - If stride of pooling equals the size, it will then apply the effect of shrinking.
 - Hyperparameters summary
