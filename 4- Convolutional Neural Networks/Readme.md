@@ -420,7 +420,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   ![](Images/cnn_use.PNG)
     
 - Putting it all together:
-  - ![](Images/04.png)
+  ![](Images/04.png)
 
 ## Deep convolutional models: case studies
 
