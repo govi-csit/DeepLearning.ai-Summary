@@ -398,6 +398,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - The output `a4 = 84 x 1` .
   - Fifth layer (Softmax)
     - Number of neurons is 10 if we need to identify for example the 10 digits.
+![](Images/cnn_example.PNG)
 - Hint a Conv1 and Pool1 is treated as one layer.
 - Some statistics about the last example:
   - ![](Images/03.png)
