@@ -417,6 +417,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - A feature detector (such as a vertical edge detector) that's useful in one part of the image is probably useful in another part of the image.
   - sparsity of connections.
     - In each layer, each output value depends only on a small number of inputs which makes it translation invariance.
+  ![](Images/cnn_use.PNG)
+    
 - Putting it all together:
   - ![](Images/04.png)
 
