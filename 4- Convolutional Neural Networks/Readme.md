@@ -435,7 +435,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - **LeNet-5**
   - **AlexNet**
   - **VGG**
-  ![](Images/cnn_types.PNG)
+  
+![](Images/cnn_types.PNG)
 - The best CNN architecture that won the last ImageNet competition is called **ResNet** and it has 152 layers!
 - There are also an architecture called **Inception** that was made by Google that are very useful to learn and apply to your tasks.
 - Reading and trying the mentioned models can boost you and give you a lot of ideas to solve your task.
