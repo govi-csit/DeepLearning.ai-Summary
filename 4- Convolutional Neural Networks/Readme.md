@@ -411,7 +411,6 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 ### Why convolutions?
 - Problems without Convolution /CNN : 
   - Using sequential NN we need to train millions of parameters through back propgation even for a small image(e.g. 32 x 32 x 3) also. If the image is 1000 x 1000 x 3 then weight matrix becomes infeasible large to train. For the same image, if we use CNN then #parameters to be trained in back propgation is very very less.
-  ![](Images/weights_count_NN.PNG)
   ![](Images/weights_count_NNvsCNN.PNG)
 - Two main advantages of Convs are:
   - Parameter sharing.
