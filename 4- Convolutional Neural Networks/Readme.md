@@ -511,7 +511,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - In this section we will learn about skip connection which makes you take the activation from one layer and suddenly feed it to another layer even much deeper in NN which allows you to train large NNs even with layers greater than 100.
 - **Residual block**
   - ResNets are built out of some Residual blocks.
-  - ![](Images/08.png)
+    ![](Images/resblock.PNG)
   - They add a shortcut/skip connection before the second activation.
   - The authors of this block find that you can train a deeper NNs using stacking this block.
   - [[He et al., 2015. Deep residual networks for image recognition]](https://arxiv.org/abs/1512.03385)
