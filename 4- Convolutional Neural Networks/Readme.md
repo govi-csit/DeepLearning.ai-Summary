@@ -493,7 +493,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - CONV = 3 X 3 filter, s = 1, same  
     - MAX-POOL = 2 X 2 , s = 2
   - Here are the architecture:
-    - ![](Images/07.png)
+      ![](Images/07.png)
+      ![](Images/vgg16.PNG)
   - This network is large even by modern standards. It has around 138 million parameters.
     - Most of the parameters are in the fully connected layers.
   - It has a total memory of 96MB per image for only forward propagation!
