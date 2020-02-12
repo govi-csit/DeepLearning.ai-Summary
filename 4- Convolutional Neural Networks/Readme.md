@@ -670,6 +670,9 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - The name inception was taken from a *meme* image which was taken from **Inception movie**
 - Here are the full model:
   - ![](Images/15.png)
+ - The same model is shown in horizontally:
+  ![](Images/inception_network1.PNG)
+  ![](Images/googlenet.PNG)
 - Some times a Max-Pool block is used before the inception module to reduce the dimensions of the inputs.
 - There are a 3 Sofmax branches at different positions to push the network toward its goal. and helps to ensure that the intermediate features are good enough to the network to learn and it turns out that softmax0 and sofmax1 gives regularization effect.
 - Since the development of the Inception module, the authors and the others have built another versions of this network. Like inception v2, v3, and v4. Also there is a network that has used the inception module and the ResNet together.
