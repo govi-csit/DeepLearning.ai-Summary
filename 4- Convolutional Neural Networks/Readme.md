@@ -559,7 +559,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
     - `a[l+2] = g( z[l+2] + ws * a[l] ) # The added Ws should make the dimensions equal`
     - ws also can be a zero padding.
-
+![](Images/whyresnetwork.PNG)
 - Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks
 
 - Lets take a look at ResNet on images.
