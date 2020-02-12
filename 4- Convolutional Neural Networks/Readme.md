@@ -616,7 +616,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - In the second discussed example above we have shrinked the input from 32 to 5 channels.
   - We will later see that by shrinking it we can save a lot of computations.
   - If we have specified the number of 1 x 1 Conv filters to be the same as the input number of channels then the output will contain the same number of channels. Then the 1 x 1 Conv will act like a non linearity and will learn non linearity operator. 
-
+![](Images/useof1by1conv.PNG)
 - Replace fully connected layers with 1 x 1 convolutions as Yann LeCun believes they are the same.
 
   - > In Convolutional Nets, there is no such thing as "fully-connected layers". There are only convolution layers with 1x1 convolution kernels and a full connection table. [Yann LeCun](https://www.facebook.com/yann.lecun/posts/10152820758292143) 
