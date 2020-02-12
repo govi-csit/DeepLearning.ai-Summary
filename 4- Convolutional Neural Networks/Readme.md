@@ -657,6 +657,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - So the total number are 12.5 Mil approx. which is so good compared to 120 Mil
 - A 1 x 1 Conv here is called Bottleneck `BN`.
 - It turns out that the 1 x 1 Conv won't hurt the performance.
+![](Images/reducecompby1by1conv.PNG)
+
 - **Inception module**, dimensions reduction version:
   - ![](Images/14.png)
 - Example of inception model in Keras:
