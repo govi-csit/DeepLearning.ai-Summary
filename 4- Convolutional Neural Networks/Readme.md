@@ -641,6 +641,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - Number of outputs * Filter size * Filter size * Input dimensions
     - Which equals: `28 * 28 * 32 * 5 * 5 * 192 = 120 Mil` 
     - 120 Mil multiply operation still a problem in the modern day computers.
+  ![](Images/computations.PNG)
   - Using a 1 x 1 convolution we can reduce 120 mil to just 12 mil. Lets see how.
 - Using 1 X 1 convolution to reduce computational cost:
   - The new architecture are:
