@@ -572,7 +572,9 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - No FC layers, No dropout is used.
   - Two main types of blocks are used in a ResNet, depending mainly on whether the input/output dimensions are same or different. You are going to implement both of them.
   - The dotted lines is the case when the dimensions are different. To solve then they down-sample the input by 2 and then pad zeros to match the two dimensions. There's another trick which is called bottleneck which we will explore later.
-
+  
+  ![](Images/34layerres.PNG)
+  
 - Useful concept (**Spectrum of Depth**):
 
   - ![](Images/12.png)
