@@ -605,7 +605,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - Input: `6x6x32`
     - Conv: `1x1x32` 5 filters.     `# The 1 x 1 Conv`
     - Output: `6x6x5`
-
+![](Images/1by1conv.PNG)
 - The Network in Network is proposed in [Lin et al., 2013. Network in network]
 
 - It has been used in a lot of modern CNN implementations like ResNet and Inception models.
