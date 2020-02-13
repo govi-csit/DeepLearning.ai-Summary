@@ -854,7 +854,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
               (y1'-y1)^2						if y1 = 0
           }
       ```
-
+      ![](Images/clssification_with_localization3.PNG)
   - In practice we use logistic regression for `pc`, log likely hood loss for classes, and squared error for the bounding box.
 
 ### Landmark Detection
