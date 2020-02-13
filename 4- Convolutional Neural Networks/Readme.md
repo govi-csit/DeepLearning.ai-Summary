@@ -698,8 +698,15 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - You don't have much a lot of data to train a NN on these images.
   - Andrew recommends to go online and download a good NN with its weights, remove the softmax activation layer and put your own one and make the network learn only the new layer while other layer weights are fixed/frozen.
   - Frameworks have options to make the parameters frozen in some layers using `trainable = 0` or `freeze = 0`
+  
+  ![](Images/transfer_learn1.PNG)
+  
+  
+  ![](Images/transfer_learn2.PNG)
+  ![](Images/transfer_learn3.PNG)
   - One of the tricks that can speed up your training, is to run the pretrained NN without final softmax layer and get an intermediate representation of your images and save them to disk. And then use these representation to a shallow NN network. This can save you the time needed to run an image through all the layers.
     - Its like converting your images into vectors.
+    ![](Images/transfer_learn4.PNG)
 - Another example:
   - What if in the last example you have a lot of pictures for your cats.
   - One thing you can do is to freeze few layers from the beginning of the pretrained network and learn the other weights in the network.
