@@ -723,9 +723,11 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - The majority of computer vision applications needs more data right now.
 - Some data augmentation methods that are used for computer vision tasks includes:
   - Mirroring.
+  ![](Images/augmentation_mirroring.PNG)
   - Random cropping.
     - The issue with this technique is that you might take a wrong crop.
     - The solution is to make your crops big enough.
+   ![](Images/augmentation_crop.PNG)
   - Rotation.
   - Shearing.
   - Local warping.
@@ -733,9 +735,11 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - For example, we add to R, G, and B some distortions that will make the image identified as the same for the human but is different for the computer.
     - In practice the added value are pulled from some probability distribution and these shifts are some small.
     - Makes your algorithm more robust in changing colors in images. 
+    ![](Images/augmentation_colorshift.PNG)
     - There are an algorithm which is called ***PCA color augmentation*** that decides the shifts needed automatically.
 - Implementing distortions during training:
   - You can use a different CPU thread to make you a distorted mini batches while you are training your NN.
+  ![](Images/augmentation_implement.PNG)
 - Data Augmentation has also some hyperparameters. A good place to start is to find an open source data augmentation implementation and then use it or fine tune these hyperparameters.
 
 ### State of Computer Vision
