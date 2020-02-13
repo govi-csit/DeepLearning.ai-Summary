@@ -796,64 +796,64 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - **Instance Segmentation**
     - This is like the full problem. Rather than we want to predict the bounding box, we want to know which pixel label but also distinguish them.
     - ![](Images/InstanceSegmentation.png)
+- **Classification with localization**:
+  - To make image classification we use a Conv Net with a Softmax attached to the end of it.
 
-- To make image classification we use a Conv Net with a Softmax attached to the end of it.
-
-- To make classification with localization we use a Conv Net with a softmax attached to the end of it and a four numbers `bx`, `by`, `bh`, and `bw` to tell you the location of the class in the image. The dataset should contain this four numbers with the class too.
-
-- Defining the target label Y in classification with localization problem: 
-
-  - ```
-    Y = [
-      		Pc				# Probability of an object is presented
-      		bx				# Bounding box
-      		by				# Bounding box
-      		bh				# Bounding box
-      		bw				# Bounding box
-      		c1				# The classes
-      		c2
-      		...
-    ]
-    ```
-
-  - Example (Object is present):
+  - To make classification with localization we use a Conv Net with a softmax attached to the end of it and a four numbers `bx`, `by`, `bh`, and `bw` to tell you the location of the class in the image. The dataset should contain this four numbers with the class too.
+  ![](Images/clssification_with_localization.PNG)
+  - Defining the target label Y in classification with localization problem: 
 
     - ```
       Y = [
-        		1		# Object is present
-        		0
-        		0
-        		100
-        		100
-        		0
-        		1
-        		0
+            Pc				# Probability of an object is presented
+            bx				# Bounding box
+            by				# Bounding box
+            bh				# Bounding box
+            bw				# Bounding box
+            c1				# The classes
+            c2
+            ...
       ]
       ```
 
-  - Example (When object isn't presented):
+    - Example (Object is present):
+
+      - ```
+        Y = [
+              1		# Object is present
+              0
+              0
+              100
+              100
+              0
+              1
+              0
+        ]
+        ```
+      ![](Images/clssification_with_localization1.PNG)
+    - Example (When object isn't presented):
+
+      - ```
+        Y = [
+              0		# Object isn't presented
+              ?		# ? means we dont care with other values
+              ?
+              ?
+              ?
+              ?
+              ?
+              ?
+        ]
+        ```
+      ![](Images/clssification_with_localization2.PNG)
+  - The loss function for the Y we have created (Example of the square error):
 
     - ```
-      Y = [
-        		0		# Object isn't presented
-        		?		# ? means we dont care with other values
-        		?
-        		?
-        		?
-        		?
-        		?
-        		?
-      ]
+      L(y',y) = {
+              (y1'-y1)^2 + (y2'-y2)^2 + ...           if y1 = 1
+              (y1'-y1)^2						if y1 = 0
+          }
       ```
-
-- The loss function for the Y we have created (Example of the square error):
-
-  - ```
-    L(y',y) = {
-      			(y1'-y1)^2 + (y2'-y2)^2 + ...           if y1 = 1
-      			(y1'-y1)^2						if y1 = 0
-    		}
-    ```
 
   - In practice we use logistic regression for `pc`, log likely hood loss for classes, and squared error for the bounding box.
 
