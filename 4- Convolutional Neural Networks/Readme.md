@@ -710,9 +710,12 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - Another example:
   - What if in the last example you have a lot of pictures for your cats.
   - One thing you can do is to freeze few layers from the beginning of the pretrained network and learn the other weights in the network.
+  ![](Images/transfer_learn5.PNG)
   - Some other idea is to throw away the layers that aren't frozen and put your own layers there.
+  ![](Images/transfer_learn6.PNG)
 - Another example:
   - If you have enough data, you can fine tune all the layers in your pretrained network but don't random initialize the parameters, leave the learned parameters as it is and learn from there. 
+  ![](Images/transfer_learn7.PNG)
 
 ### Data Augmentation
 
