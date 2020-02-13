@@ -752,6 +752,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - If you don't have that much data people tend to try more hand engineering for the problem "Hacks". Like choosing a more complex NN architecture.
 - Because we haven't got that much data in a lot of computer vision problems, it relies a lot on hand engineering.
 - We will see in the next chapter that because the object detection has less data, a more complex NN architectures will be presented.
+![](Images/datavshandenginerring.PNG)
 - Tips for doing well on benchmarks/winning competitions:
   - Ensembling.
     - Train several networks independently and average their outputs. Merging down some classifiers.
@@ -763,6 +764,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - Run classifier on multiple versions of test versions and average results.
     - There is a technique called 10 crops that uses this.
     - This can give you a better result in the production.
+   ![](Images/tipsforbenchmark.PNG)
 - Use open source code
   - Use architectures of networks published in the literature.
   - Use open source implementations if possible.
