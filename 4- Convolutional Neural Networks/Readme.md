@@ -880,6 +880,10 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 - Hint, in your labeled data, if `l1x,l1y` is the left corner of left eye, all other `l1x,l1y` of the other examples has to be the same.
 
+- If we are interested in pose-detections then we need to define a few key positions like mid point of the chest, left shoulder, left elbow, wrist, and so on. we  have to build a ConvNet with these annotate key positions in persons pose then it will outputs the pose of the person. To to this we need to specify key landmarks(l1x, l1y, ........) for mid point of chest, left shoulder, left elbow and wrist.
+
+  ![](Images/landmark_posedetect.PNG)
+
 ### Object Detection
 
 - We will use a Conv net to solve the object detection problem using a technique called the sliding windows detection algorithm.
