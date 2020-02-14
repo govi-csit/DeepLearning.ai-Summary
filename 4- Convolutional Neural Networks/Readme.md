@@ -875,7 +875,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
       		l64y
     ]
     ```
-
+![](Images/landmark_detect.PNG)
 - Another application is when you need to get the skeleton of the person using different landmarks/points in the person which helps in some applications.
 
 - Hint, in your labeled data, if `l1x,l1y` is the left corner of left eye, all other `l1x,l1y` of the other examples has to be the same.
