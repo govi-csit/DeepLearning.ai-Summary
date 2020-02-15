@@ -929,6 +929,10 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - The weakness of the algorithm is that the position of the rectangle wont be so accurate. Maybe none of the rectangles is exactly on the object you want to recognize.
   - ![](Images/23.png)
   - In red, the rectangle we want and in blue is the required car rectangle.
+  - **The main disadvantage of sliding window detection algorithm is computational cost** because we are cropping out so many different square regions in the image and running each of theam independently through ConvNet. If we use very big step size(stride) then that would reduce the number of windowses we need to pass through ConvNet but it might hurt the performance. Whereas if we use a very small stride then there will huge number of little regions needs to pass through ConvNet which means a very high computational cost.
+  
+  ![](Images/sliding_window3.PNG)
+  
 
 ### Bounding Box Predictions
 
