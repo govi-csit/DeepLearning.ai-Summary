@@ -921,6 +921,9 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - ![](Images/22.png)
   - This example has a total of 16 sliding windows that shares the computation together.
   - [[Sermanet et al., 2014, OverFeat: Integrated recognition, localization and detection using convolutional networks]](https://arxiv.org/abs/1312.6229)
+  - Here run the sliding window first on the region which gives output corresponding on the uppper-left hand corner. Then using stride=2 shift one window over, one window over, one window over..... and so on. As you go down through whole image, it will give 8 x 8 x 4 outputs.
+  ![](Images/sliding_window1.PNG)
+
 - The weakness of the algorithm is that the position of the rectangle wont be so accurate. Maybe none of the rectangles is exactly on the object you want to recognize.
   - ![](Images/23.png)
   - In red, the rectangle we want and in blue is the required car rectangle.
