@@ -901,6 +901,9 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   
 - Example: 
   ![](Images/sliding_window0.PNG)
+- One of the downside of the algorithm is that it just classifies a lot of regions where clearly no objects are present.
+  ![](Images/sliding_window4.PNG)
+
 - Disadvantage of sliding window is the computation time.
 - In the era of machine learning before deep learning, people used a hand crafted linear classifiers that classifies the object and then use the sliding window technique. The linear classier make it a cheap computation. But in the deep learning era that is so  computational expensive due to the complexity of the deep learning model.
 - To solve this problem, we can implement the sliding windows with a ***Convolutional approach***.
