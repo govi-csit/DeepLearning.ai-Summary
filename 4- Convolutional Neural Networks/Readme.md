@@ -1035,7 +1035,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   3. Motorcycle.
 
 - We decided to choose two anchor boxes, a taller one and a wide one.
-
+  - ![](Images/two_anchor_boxes.PNG) 
   - Like we said in practice they use five or more anchor boxes hand made or generated using k-means.
 
 - Our labeled Y shape will be `[Ny, HeightOfGrid, WidthOfGrid, 16]`, where Ny is number of instances and each row (of size 16) is as follows:
@@ -1044,13 +1044,15 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 - Your dataset could be an image with a multiple labels and a rectangle for each label, we should go to your dataset and make the shape and values of Y like we agreed.
 
-  - An example:
-    - ![](Images/30.png)
-  - We first initialize all of them to zeros and ?, then for each label and rectangle choose its closest grid point then the shape to fill it and then the best anchor point based on the IOU. so that the shape of Y for one image should be `[HeightOfGrid, WidthOfGrid,16]`
+  - **Training**:
+    ![](Images/yolo1.PNG)
+    - We first initialize all of them to zeros and ?, then for each label and rectangle choose its closest grid point then the shape to fill it and then the best anchor point based on the IOU. so that the shape of Y for one image should be `[HeightOfGrid, WidthOfGrid,16]`
 
-- Train the labeled images on a Conv net. you should receive an output of `[HeightOfGrid, WidthOfGrid,16]` for our case.
-
-- To make predictions, run the Conv net on an image and run Non-max suppression algorithm for each class you have in our case there are 3 classes.
+    - Train the labeled images on a Conv net. you should receive an output of `[HeightOfGrid, WidthOfGrid,16]` for our case.
+  - **Testing**:
+    ![](Images/yolo1.PNG)
+    - Given an image, NN will ouput 3 x 3 x 2 x 8 volume where for each grid cell, we get a vector of 2 x 8 parameters
+    - To make predictions, run the Conv net on an image and run Non-max suppression algorithm for each class you have in our case there are 3 classes.
 
   - You could get something like that:
     - ![](Images/31.png)
