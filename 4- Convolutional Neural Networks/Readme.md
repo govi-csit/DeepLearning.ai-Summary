@@ -1329,6 +1329,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - We want d result to be low in case of the same faces.
   - We use tau T as a threshold for d:
     - If d( **img1**, **img2** ) <= T    Then the faces are the same.
+  
+![](Images/one_short4.PNG)
 - Similarity function helps us solving the one shot learning. Also its robust to new inputs.
 
 #### Siamese Network
