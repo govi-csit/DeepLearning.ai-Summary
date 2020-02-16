@@ -995,8 +995,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Here mid point of the pedestrian and midpoint of the car are in almost the same place, and both of them fall into the same grid cell. For this example we are going to continue to use 3 x 3 grid
   - Y is output vector where it detects three classes : pedestrians, cars and motorcycles.
   - It won't able to ouput two detections so have to pick one of the two detections to output.
-  - **The two anchor boxes we choose is predefined two different shapes called anchor boxes or anchor boxes shapes**, and we can able to associate two predections with these two anchor boxes . In general we might use more anchor boxes, may be five or even more but here we are going to use two anchor boxes for clear illustration.
-    ![](Images/28.png)
+- **The two anchor boxes we choose is predefined two different shapes called anchor boxes or anchor boxes shapes**, and we can able to associate two predections with these two anchor boxes . In general we might use more anchor boxes, may be five or even more but here we are going to use two anchor boxes for clear illustration.
+  ![](Images/28.png)
 - If Y = `[Pc, bx, by, bh, bw, c1, c2, c3]` Then to use two anchor boxes like this:
   - Y = `[Pc, bx, by, bh, bw, c1, c2, c3, Pc, bx, by, bh, bw, c1, c2, c3]`  We simply have repeated  the one anchor Y.
     ![](Images/anchor_box1.PNG)
