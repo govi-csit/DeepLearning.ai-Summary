@@ -1337,10 +1337,14 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 - We will implement the similarity function using a type of NNs called Siamease Network in which we can pass multiple inputs to the two or more networks with the same architecture and parameters.
 - Siamese network architecture are as the following:
-  - ![](Images/35.png)
-  - We make 2 identical conv nets which encodes an input image into a vector. In the above image the vector shape is (128, )
-  - The loss function will be `d(x1, x2) = || f(x1) - f(x2) ||^2`
-  - If `X1`, `X2` are the same person, we want d to be low. If they are different persons, we want d to be high.
+  ![](Images/siamese1.PNG)
+  - Here we input an image (let’s say `X(1)`) through a sequence of convolutional, pulling and fully connected layers, and end up with a feature vector(let’s say 128 number). sometimes we fed this vector to a soft max unit to make a classification but we are not going to use here instead we focus on end vector(let’s call it as `f(X(1))`); we should think `f(X(1))` as an encoding of the input image `X(1)`. In a nutshell, we are taking the input image and re representing it as a vector of 128 numbers.
+  - **How to compare two pictures?**
+    - If you want to two pictures(lets say `X(1)` with `X(2)` then we need to feed the second picture `X(2)` to the same neural network with same parameters and get a different of 128 numbers. Lets call the encoding of the second picture as `f(X2)`. i.e. We make 2 identical conv nets which encodes an input image into a vector. In the above image the vector shape is (128, )
+    ![](Images/35.png)
+    - Finally if you believe that these encodings are a good representation of these two images then apply similarity function : distance between `X(1)` and `X(2)` is norm of the difference between the encoding of these images 
+    - The loss function will be `d(x1, x2) = || f(x1) - f(x2) ||^2`
+    - If `X1`, `X2` are the same person, we want d to be low. If they are different persons, we want d to be high.
   - [[Taigman et. al., 2014. DeepFace closing the gap to human level performance]](https://www.cv-foundation.org/openaccess/content_cvpr_2014/html/Taigman_DeepFace_Closing_the_2014_CVPR_paper.html)
 
 #### Triplet Loss
