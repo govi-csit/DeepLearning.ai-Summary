@@ -978,14 +978,17 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - For example:
   - ![](Images/26.png)
   - Each car has two or more detections with different probabilities. This came from some of the grids that thinks that this is the center point of the object.
-- Non-max suppression algorithm:
+- **Non-max suppression algorithm**:
   1. Lets assume that we are targeting one class as an output class.
   2. Y shape should be `[Pc, bx, by, bh, hw]` Where Pc is the probability if that object occurs.
   3. Discard all boxes with `Pc < 0.6`  
   4. While there are any remaining boxes:
      1. Pick the box with the largest Pc Output that as a prediction.
      2. Discard any remaining box with `IoU > 0.5` with that box output in the previous step i.e any box with high overlap(greater than overlap threshold of 0.5).
-- If there are multiple classes/object types `c` you want to detect, you should run the Non-max suppression `c` times, once for every output class.
+![](Images/non_max_supression1.PNG)
+- Example:
+  ![](Images/non_max_supression2.PNG)
+- If there are multiple classes/object types `c` you want to detect then the ouput vector will have `c` additional components. So we  should independently run the Non-max suppression `c` times , once for every output class.
 
 ### Anchor Boxes
 
