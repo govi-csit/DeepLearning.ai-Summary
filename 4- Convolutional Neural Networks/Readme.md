@@ -1345,6 +1345,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - Finally if you believe that these encodings are a good representation of these two images then apply similarity function : distance between `X(1)` and `X(2)` is norm of the difference between the encoding of these images 
     - The loss function will be `d(x1, x2) = || f(x1) - f(x2) ||^2`
     - If `X1`, `X2` are the same person, we want d to be low. If they are different persons, we want d to be high.
+  
+    ![](Images/siamese3.PNG)
   - [[Taigman et. al., 2014. DeepFace closing the gap to human level performance]](https://www.cv-foundation.org/openaccess/content_cvpr_2014/html/Taigman_DeepFace_Closing_the_2014_CVPR_paper.html)
 
 #### Triplet Loss
