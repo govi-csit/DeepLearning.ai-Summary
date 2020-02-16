@@ -989,24 +989,33 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 ### Anchor Boxes
 
-- In YOLO, a grid only detects one object. What if a grid cell wants to detect multiple object?
+- One of the problem with object detection is, a grid only detects one object. What if a grid cell wants to detect multiple object?
   - ![](Images/27.png)
   - Car and person grid is same here.
   - In practice this happens rarely.
-- The idea of Anchor boxes helps us solving this issue.
+- Here is the idea of Anchor boxes helps us solving this issue.
 - If Y = `[Pc, bx, by, bh, bw, c1, c2, c3]` Then to use two anchor boxes like this:
   - Y = `[Pc, bx, by, bh, bw, c1, c2, c3, Pc, bx, by, bh, bw, c1, c2, c3]`  We simply have repeated  the one anchor Y.
   - The two anchor boxes you choose should be known as a shape:
-    - ![](Images/28.png)
-- So Previously, each object in training image is assigned to grid cell that contains that object's midpoint.
-- With two anchor boxes, Each object in training image is assigned to grid cell that contains object's midpoint and anchor box for the grid cell with <u>highest IoU</u>. You have to check where your object should be based on its rectangle closest to which anchor box.
-- Example of data:
-  - ![](Images/29.png)
-  - Where the car was near the anchor 2 than anchor 1.
+    ![](Images/28.png)
+    
+  - summary:
+    ![](Images/anchor_box1.PNG)
+- **Anchor Box algorithm**:
+  - Previously, each object in training image is assigned to grid cell that contains that object's midpoint. With two anchor boxes, Each object in training image is assigned to grid cell that contains object's midpoint and anchor box for the grid cell with <u>highest IoU</u>. You have to check where your object should be based on its rectangle closest to which anchor box, and assign it to a pair : (grid cell, anchor box ...)
+  
+      ![](Images/anchor_box2.PNG)
+  
+  - Example of data:
+      ![](Images/anchor_box3.PNG)
+    - Where the car was near the anchor 2 than anchor 1.
+ - Anchor boxes allows your algorithm to specialize, means in our case to easily detect wider images or taller ones.
+  - **What if you have two anchor boxes but three objects in the same grid cell?** This is on case where this algorithm doesn't handle it well. In practice, it happens quite rarely.
 - You may have two or more anchor boxes but you should know their shapes.
   - how do you choose the anchor boxes and people used to just choose them by hand. Maybe five or ten anchor box shapes that spans a variety  of shapes that cover the types of objects you seem to detect frequently.
   - You may also use a k-means algorithm on your dataset to specify that.
-- Anchor boxes allows your algorithm to specialize, means in our case to easily detect wider images or taller ones.
+ 
+
 
 ### YOLO Algorithm
 
