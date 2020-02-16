@@ -1316,7 +1316,14 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 - One of the face recognition challenges is to solve one shot learning problem.
 - One Shot Learning: A recognition system is able to recognize a person, learning from one image.
+  ![](Images/one_short1.PNG)
 - Historically deep learning doesn't work well with a small number of data.
+  - We can try one approach is that input the image of the person to a ConvNet and output a labely Y using a soft max unit with 5 classes(4 persons + no person mapping). But it doesn't work really well because it is really not enought to train a robust model with a small training data set.
+  
+      ![](Images/one_short2.PNG)
+  - Assume a new person joins your team then now we need to detect five persons so we will have six outputs(5 persons + no person)i.e. 6 soft max units. We need to retrain ConvNet every time when a new person joins which is not a good approach.
+  
+      ![](Images/one_short3.PNG)
 - Instead to make this work, we will learn a **similarity function**:
   - d( **img1**, **img2** ) = degree of difference between images.
   - We want d result to be low in case of the same faces.
