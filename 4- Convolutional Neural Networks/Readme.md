@@ -1008,13 +1008,14 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Example of data:
       ![](Images/anchor_box3.PNG)
     - Where the car was near the anchor 2 than anchor 1.
-  - Anchor boxes allows your algorithm to specialize, means in our case to easily detect wider images or taller ones.
-  - **What if you have two anchor boxes but three objects in the same grid cell?** This is on case where this algorithm doesn't handle it well. In practice, it happens quite rarely.
-    ![](Images/27.png)
-    - Here car and person grid is same here, but in practice this happens rarely
-  - You may have two or more anchor boxes but you should know their shapes.
-    - how do you choose the anchor boxes and people used to just choose them by hand. Maybe five or ten anchor box shapes that spans a variety  of shapes that cover the types of objects you seem to detect frequently.
-    - You may also use a k-means algorithm on your dataset to specify that.
+- Anchor boxes allows your algorithm to specialize, means in our case to easily detect wider images or taller ones.
+- **What if you have two anchor boxes but three objects in the same grid cell?** This is on case where this algorithm doesn't handle it well. In practice, it happens quite rarely.
+  
+  ![](Images/27.png)
+  - Here car and person grid is same here, but in practice this happens rarely
+- You may have two or more anchor boxes but you should know their shapes.
+  - how do you choose the anchor boxes and people used to just choose them by hand. Maybe five or ten anchor box shapes that spans a variety  of shapes that cover the types of objects you seem to detect frequently.
+  - You may also use a k-means algorithm on your dataset to specify that.
  
 
 
