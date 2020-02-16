@@ -891,13 +891,15 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - The first thing, we will train a Conv net on cropped car images and non car images.
   - ![](Images/18.png)
 - After we finish training of this Conv net we will then use it with the sliding windows technique.
-- Sliding windows detection algorithm:
+- **Sliding windows detection algorithm**:
   1. Decide a rectangle size.
   2. Split your image into rectangles of the size you picked. Each region should be covered. You can use some strides.
   3. For each rectangle feed the image into the Conv net and decide if its a car or not.
   4. Pick larger/smaller rectangles and repeat the process from 2 to 3.
   5. Store the rectangles that contains the cars.
   6. If two or more rectangles intersects choose the rectangle with the best accuracy.
+  
+  ![](Images/sliding_window0.PNG)
 - Disadvantage of sliding window is the computation time.
 - In the era of machine learning before deep learning, people used a hand crafted linear classifiers that classifies the object and then use the sliding window technique. The linear classier make it a cheap computation. But in the deep learning era that is so  computational expensive due to the complexity of the deep learning model.
 - To solve this problem, we can implement the sliding windows with a ***Convolutional approach***.
