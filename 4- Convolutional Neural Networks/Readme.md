@@ -1042,9 +1042,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
   - `[Pc, bx, by, bh, bw, c1, c2, c3, Pc, bx, by, bh, bw, c1, c2, c3]`
 
-- Your dataset could be an image with a multiple labels and a rectangle for each label, we should go to your dataset and make the shape and values of Y like we agreed.
-
 - **Training**:
+  - Your dataset could be an image with a multiple labels and a rectangle for each label, we should go to your dataset and make the shape and values of Y like we agreed.
   ![](Images/yolo1.PNG)
   - We first initialize all of them to zeros and ?, then for each label and rectangle choose its closest grid point then the shape to fill it and then the best anchor point based on the IOU. so that the shape of Y for one image should be `[HeightOfGrid, WidthOfGrid,16]`
   - Train the labeled images on a Conv net. you should receive an output of `[HeightOfGrid, WidthOfGrid,16]` for our case.
@@ -1053,6 +1052,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - Given an image, NN will ouput 3 x 3 x 2 x 8 volume where **for each grid cell, we get a vector of 2 x 8 parameters**
     - If #anchor boxes = `c` then we get a predicted vector of `c` x 8 parameters for each grid. If #grids = m(rows) x n(coumns) then output from NN is `m` x `n` x `c` x `8`, where **8 is #parameters required to represent a class label**. 
   - To make predictions, run the Conv net on an image and run Non-max suppression algorithm for each class you have in our case there are 3 classes.
+    ![](Images/yolo3.PNG)
+    
     - You could get something like that:
       - ![](Images/31.png)
       
