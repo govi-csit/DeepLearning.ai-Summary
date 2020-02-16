@@ -1053,9 +1053,10 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - If #anchor boxes = `c` then we get a predicted vector of `c` x 8 parameters for each grid. If #grids = m(rows) x n(coumns) then output from NN is `m` x `n` x `c` x `8`, where **8 is #parameters required to represent a class label**.
   ![](Images/yolo2.PNG)
   
-  - **Run throuhg non-max supression on a test image**:
+  - **Run throuhg non-max supression**:
+    - Lets take a new test set image as shown below
     ![](Images/yolo3.PNG)
-    - Total number of generated boxes are grid_width * grid_height * no_of_anchors = 3 x 3 x 2
+      - Total number of generated boxes are grid_width * grid_height * no_of_anchors = 3 x 3 x 2
     - By removing the low probability predictions you should have:
       ![](Images/32.png)
     - Then get the best probability followed by the IOU filtering. i.e. For each class (pedestrian, car, motorcycle) use non-max suppression to generate final predictions.
