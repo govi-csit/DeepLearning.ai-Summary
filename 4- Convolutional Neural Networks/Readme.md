@@ -992,7 +992,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 ### Anchor Boxes
 
-- One of the problem with object detection is, a grid only detects one object. What if a grid cell wants to detect multiple object? - here is the idea of Anchor boxes helps us solving this issue.
+- One of the problem with object detection(YOLO) is, a grid only detects one object. What if a grid cell wants to detect multiple object? - here is the idea of Anchor boxes helps us solving this issue.
 
   ![](Images/anchor_box0.PNG)
   - Here mid point of the pedestrian and midpoint of the car are in almost the same place, and both of them fall into the same grid cell. For this example we are going to continue to use 3 x 3 grid
