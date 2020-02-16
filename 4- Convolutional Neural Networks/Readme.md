@@ -1055,7 +1055,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   
   - **Run throuhg non-max supression**:
     - Lets take a new test set image as shown below
-    ![](Images/yolo3.PNG)
+    
+      ![](Images/yolo3.PNG)
       - Total number of generated boxes are grid_width * grid_height * no_of_anchors = 3 x 3 x 2
     - By removing the low probability predictions you should have:
       ![](Images/32.png)
