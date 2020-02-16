@@ -899,6 +899,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   5. Store the rectangles that contains the cars.
   6. If two or more rectangles intersects choose the rectangle with the best accuracy.
   
+- Example: 
   ![](Images/sliding_window0.PNG)
 - Disadvantage of sliding window is the computation time.
 - In the era of machine learning before deep learning, people used a hand crafted linear classifiers that classifies the object and then use the sliding window technique. The linear classier make it a cheap computation. But in the deep learning era that is so  computational expensive due to the complexity of the deep learning model.
