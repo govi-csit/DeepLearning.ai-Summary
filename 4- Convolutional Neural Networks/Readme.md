@@ -1358,15 +1358,14 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
   ![](Images/tripplet_loss1.PNG)
 - Formally we want:
-  - Positive distance to be less than negative distance
-  - `||f(A) - f(P)||^2  <= ||f(A) - f(N)||^2`
-  - Then
-  - `||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 <= 0`
-  - To make sure the NN won't get an output of zeros easily:
-  - `||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 <= -alpha`
-    - Alpha is a small number. Sometimes its called the margin.
-  - Then
-  - `||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 + alpha <= 0`
+  - Want the encoding between anchor and positive example(positive distance) to be small. In particular, **positive distance to be less than  or equal to the negative distance** ( the squared norm between between the encoding of anchor and encoding of negative example ) <br><br>==> `||f(A) - f(P)||^2  <= ||f(A) - f(N)||^2`
+  <br><br> ![](Images/tripplet_loss2.PNG)
+<br><br>==> `||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 <= 0`
+  - If the encoding for every image was identical to the encoding other image then NN gives zero minus zero = 0. To prevent NN from giving zero output, we modify the objective function to say that `||f(A) - f(P)||^2  - ||f(A) - f(N)||^2` doesn't needs to be just <=0, it needs to be quite a bit smaller than zero. In particular we say that it needs to be less than a negative alpha where alpha is another hyper parameter and also called as margin. This prevents NN outputting trivial solutions(zero output):
+<br><br>==> `||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 <= -alpha`
+<br>==> `||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 + alpha <= 0`
+  
+  <br> ![](Images/tripplet_loss3.PNG)
 - Final Loss function:
   - Given 3 images (A, P, N)
   - `L(A, P, N) = max (||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 + alpha , 0)`
