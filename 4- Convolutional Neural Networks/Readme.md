@@ -1390,11 +1390,15 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 - Triplet loss is one way to learn the parameters of a conv net for face recognition there's another way to learn these parameters as a straight binary classification problem.
 - Learning the similarity function another way:
-  - ![](Images/36.png)
-  - The final layer is a sigmoid layer.
-  - `Y' = wi * Sigmoid ( f(x(i)) - f(x(j)) ) + b` where the subtraction is the Manhattan distance between f(x(i)) and f(x(j))
-  - Some other similarities can be Euclidean and Ki square similarity.
-  - The NN here is Siamese means the top and bottom convs has the same parameters.
+  - Take the computed embeddings(128 dimensions / may be higher dimensional) or vectors from the siamese network and input into **logistic regression unit** where the target ouput will be 1 if both these are same persons and o if both of these are different persons. <br><br>The final layer is a sigmoid layer : `Y' = wi * Sigmoid ( f(x(i)) - f(x(j)) ) + b` where the subtraction is the Manhattan distance between f(x(i)) and f(x(j))
+
+    ![](Images/tripplet_loss8.PNG)
+  - This is the way to treat face recognition as binary classification problem, and which is alternative to triplet loss. 
+  - Some other similarities can be Euclidean and Chi-squared similarity.
+  <br>![](Images/tripplet_loss9.PNG)
+  - we create training set using pairs of images where target label is one when these are pictures of same person and 0 when these are picture are of different person.
+  <br>![](Images/tripplet_loss10.PNG)
+- The NN here is Siamese means the top and bottom convs has the same parameters. 
 - The paper for this work: [[Taigman et. al., 2014. DeepFace closing the gap to human level performance]](https://www.cv-foundation.org/openaccess/content_cvpr_2014/html/Taigman_DeepFace_Closing_the_2014_CVPR_paper.html)
 - A good performance/deployment trick:
   - Pre-compute all the images that you are using as a comparison to the vector f(x(j))
