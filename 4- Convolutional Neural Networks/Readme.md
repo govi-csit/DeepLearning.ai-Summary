@@ -1367,18 +1367,20 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   
   <br> ![](Images/tripplet_loss3.PNG)
 - Final Loss function:
-  - Given 3 images (A, P, N)
-  - `L(A, P, N) = max (||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 + alpha , 0)`
-  - `J = Sum(L(A[i], P[i], N[i]) , i)` for all triplets of images.
+  - Given 3 images (A, P, N), the loss function is <br><br>`L(A, P, N) = max (||f(A) - f(P)||^2  - ||f(A) - f(N)||^2 + alpha , 0)`
+  <br><br> ![](Images/tripplet_loss4.PNG)
+  <br><br>Cost function : `J = Sum(L(A[i], P[i], N[i]) , i)` for all triplets of images.
+  <br> ![](Images/tripplet_loss5.PNG)
+    
 - You need multiple images of the same person in your dataset. Then get some triplets out of your dataset. Dataset should be big enough.
 - Choosing the triplets A, P, N:
-  - During training if A, P, N are chosen randomly (Subjet to A and P are the same and A and N aren't the same) then one of the problems this constrain is easily satisfied 
-    - `d(A, P) + alpha <= d (A, N)` 
-    - So the NN wont learn much
+  - During training if A, P, N are chosen randomly (Subjet to A and P are the same and A and N aren't the same) then one of the problems this constrain : **`d(A, P) + alpha <= d (A, N)`** is easily satisfied because there is high chance that `||d (A, N)||^2` will be much bigger.
+    - So the NN wont learn much i.e. Gradient descent won't do anything because your NN will easily classify randomly selected triplets
+    <br><br> ![](Images/tripplet_loss6.PNG)
   - What we want to do is choose triplets that are **hard** to train on.
-    - So for all the triplets we want this to be satisfied:
-    - `d(A, P) + alpha <= d (A, N)`
-    - This can be achieved by for example same poses!
+    - So for all the triplets we want this to be satisfied: **`d(A, P) + alpha <= d (A, N)`**
+    - This can be achieved by for example some poses!
+    <br> ![](Images/tripplet_loss7.PNG)
     - Find more at the paper.
 - Details are in this paper [[Schroff et al.,2015, FaceNet: A unified embedding for face recognition and clustering]](https://arxiv.org/abs/1503.03832)
 - Commercial recognition systems are trained on a large datasets like 10/100 million images.
