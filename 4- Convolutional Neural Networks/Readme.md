@@ -1355,6 +1355,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - Our learning objective in the triplet loss function is to get the distance between an **Anchor** image and a **positive** or a **negative** image.
   - Positive means same person, while negative means different person.
 - The triplet name came from that we are comparing an anchor A with a positive P and a negative N image.
+
+  ![](Images/tripplet_loss1.PNG)
 - Formally we want:
   - Positive distance to be less than negative distance
   - `||f(A) - f(P)||^2  <= ||f(A) - f(N)||^2`
