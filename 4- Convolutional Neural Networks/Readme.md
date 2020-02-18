@@ -1460,14 +1460,16 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - `J(C, G)` measures how similar is the generated image to the Content image.
   - `J(S, G)` measures how similar is the generated image to the Style image.
   - alpha and beta are relative weighting to the similarity and these are hyperparameters.
-<br><br>![](Images/neural_trans_costfunct.PNG)
+
+<br>![](Images/neural_trans_costfunct.PNG)
 
 - Generating the new image (Generated image G):
   1. Initiate G randomly
      - For example G: 100 X 100 X 3
   2. Use gradient descent to minimize `J(G)`
      - `G = G - dG`  We compute the gradient image and use gradient decent to minimize the cost function.
-<br><br>![](Images/generate_image1.PNG)
+
+<br>![](Images/generate_image1.PNG)
 - The iterations might be as following image:
   - Lets say we start with Content image : C and style image : S
   <br>![](Images/generate_image2.PNG)
@@ -1486,6 +1488,8 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 - Let `a(c)[l]` and `a(G)[l]` be the activation of layer `l` on the images.
 - If `a(c)[l]` and `a(G)[l]` are similar then they will have the same content
   - `J(C, G) at a layer l = 1/2 || a(c)[l] - a(G)[l] ||^2`
+
+<br><br>![](Images/content_costfun.PNG)
 
 #### Style Cost Function
 
