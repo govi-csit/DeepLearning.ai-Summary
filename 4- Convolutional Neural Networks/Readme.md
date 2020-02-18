@@ -1467,7 +1467,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
      - For example G: 100 X 100 X 3
   2. Use gradient descent to minimize `J(G)`
      - `G = G - dG`  We compute the gradient image and use gradient decent to minimize the cost function.
-<br><br>!![](Images/generate_image1.PNG)
+<br><br>![](Images/generate_image1.PNG)
 - The iterations might be as following image:
   - Lets say we start with Content image : C and style image : S
   <br>![](Images/generate_image2.PNG)
