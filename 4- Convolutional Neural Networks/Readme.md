@@ -1460,17 +1460,22 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - `J(C, G)` measures how similar is the generated image to the Content image.
   - `J(S, G)` measures how similar is the generated image to the Style image.
   - alpha and beta are relative weighting to the similarity and these are hyperparameters.
-- Find the generated image G:
+<br><br>![](Images/neural_trans_costfunct.PNG)
+
+- Generating the new image (Generated image G):
   1. Initiate G randomly
      - For example G: 100 X 100 X 3
   2. Use gradient descent to minimize `J(G)`
      - `G = G - dG`  We compute the gradient image and use gradient decent to minimize the cost function.
+<br><br>!![](Images/generate_image1.PNG)
 - The iterations might be as following image:
-  - To Generate this:
-    - ![](Images/40.png)
-  - You will go through this:
-    - ![](Images/41.png)
-
+  - Lets say we start with Content image : C and style image : S
+  <br>![](Images/generate_image2.PNG)
+  - Initialize G randomly; (intially randomly generated image is just a white noise image where each pixel value choosen at random)
+  <br>![](Images/generate_image3.PNG)
+  - As you run Gradient descent you minimize cost function J of G i.e. slowly treating the pixel values of G which results an image that looks more and more like the content image rendered in the style image
+  <br>![](Images/41.png)
+- For more :  [A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576.pdf)
 #### Content Cost Function
 
 - In the previous section we showed that we need a cost function for the content image and the style image to measure how similar is them to each other.
