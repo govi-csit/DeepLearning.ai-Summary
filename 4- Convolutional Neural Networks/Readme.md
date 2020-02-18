@@ -1421,15 +1421,31 @@ Here is the course summary as given on the course [link](https://www.coursera.or
 
 #### What are deep ConvNets learning?
 
-- Visualizing what a deep network is learning:
+- Visualizing what a deeper layers of ConvNets are learning:
   - Given this AlexNet like Conv net:
     - ![](Images/38.png)
   - Pick a unit in layer l. Find the nine image patches that maximize the unit's activation. 
     - Notice that a hidden unit in layer one will see relatively small portion of NN, so if you plotted it it will match a small image in the shallower layers while it will get larger image in deeper layers.
+<br>![](Images/deep_cnn_visualize1.PNG)
+    - The below is for 9 differnt neurons(hidden units) and for each hidden unit, the nine image patches goes through it to be highly activated.
+<br>![](Images/deep_cnn_visualize2.PNG)
+    - It turns out that hidden units in layer 1 are learning the low level representations/features like edges, colors or particular shade of a color .
   - Repeat for other units and layers.
-  - It turns out that layer 1 are learning the low level representations like colors and edges.
-- You will find out that each layer are learning more complex representations.
-  - ![](Images/39.png)
+- The hiddent units in deeper layers will see a larger region of the image. You will find out that the more go deeper in the network the layer will learn more complex representations.
+  ![](Images/39.png)
+  - Zooming layer'ys learning:
+    - Layer - 1 : 
+    <br>![](Images/deep_cnn_layer1.PNG)
+    - Layer - 2 :
+    <br>![](Images/deep_cnn_layer2.PNG)
+    - Layer - 3 :
+    <br>![](Images/deep_cnn_layer3.PNG)
+    - Layer - 4 :
+    <br>![](Images/deep_cnn_layer4.PNG)
+    - Layer - 5 :
+    <br>![](Images/deep_cnn_layer5.PNG)
+  
+  
 - The first layer was created using the weights of the first layer. Other images are generated using the receptive field in the image that triggered the neuron to be max.
 - [[Zeiler and Fergus., 2013, Visualizing and understanding convolutional networks]](https://arxiv.org/abs/1311.2901)
 - A good explanation on how to get **receptive field** given a layer:
