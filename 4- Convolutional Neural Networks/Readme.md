@@ -1426,7 +1426,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - ![](Images/38.png)
   - Pick a unit in layer l. Find the nine image patches that maximize the unit's activation. 
     - Notice that a hidden unit in layer one will see relatively small portion of NN, so if you plotted it it will match a small image in the shallower layers while it will get larger image in deeper layers.
-<br>![](Images/deep_cnn_visualize1.PNG)
+<br><br>![](Images/deep_cnn_visualize1.PNG)
     - The below is for 9 differnt neurons(hidden units) and for each hidden unit, the nine image patches goes through it to be highly activated.
 <br>![](Images/deep_cnn_visualize2.PNG)
     - It turns out that hidden units in layer 1 are learning the low level representations/features like edges, colors or particular shade of a color .
