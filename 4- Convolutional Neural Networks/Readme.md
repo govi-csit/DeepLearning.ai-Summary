@@ -1509,8 +1509,7 @@ Here is the course summary as given on the course [link](https://www.coursera.or
     - We call this matrix style matrix or Gram matrix.
     - In this matrix each cell will tell us how correlated is a channel to another channel.
   - To populate the matrix we use these equations to compute style matrix of the style image and the generated image.
-  
-  <br>![](Images/style_cost1.PNG)
+  ![](Images/style_cost1.PNG)
     - As it appears its the sum of the multiplication of each member in the matrix.
 - To compute gram matrix efficiently:
   - Reshape activation from H X W X C to HW X C
@@ -1518,9 +1517,9 @@ Here is the course summary as given on the course [link](https://www.coursera.or
   - `G[l] = F * F.T`
   
 - Finally the cost function will be as following:
-<br>![](Images/style_cost2.PNG)
+![](Images/style_cost2.PNG)
 - And if you have used it from some layers
-<br>![](Images/style_cost3.PNG)
+![](Images/style_cost3.PNG)
 
 <br>![](Images/style_cost4.PNG)
 - Steps to be made if you want to create a tensorflow model for neural style transfer:
