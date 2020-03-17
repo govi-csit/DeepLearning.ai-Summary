@@ -128,6 +128,7 @@ Here are the course summary as its given on the course [link](https://www.course
   - T<sub>x</sub> = T<sub>y</sub> = 9 in the last example although they can be different in other problems.
 - x<sup>(i)\<t></sup> is the element t of the sequence of input vector i. Similarly y<sup>(i)\<t></sup> means the t-th element in the output sequence of the i training example.
 - T<sub>x</sub><sup>(i)</sup> the input sequence length for training example i. It can be different across the examples. Similarly for T<sub>y</sub><sup>(i)</sup> will be the length of the output sequence in the i-th training example.
+<br><br>![](Images/word_representation.PNG)
 
 - **Representing words**:
     - We will now work in this course with **NLP** which stands for natural language processing. One of the challenges of NLP is how can we represent a word?
@@ -153,21 +154,28 @@ Here are the course summary as its given on the course [link](https://www.course
     - This can be solved for normal NNs by paddings with the maximum lengths but it's not a good solution.
   - Doesn't share features learned across different positions of text/sequence.
     - Using a feature sharing like in CNNs can significantly reduce the number of parameters in your model. That's what we will do in RNNs.
+<br><br>![](Images/reason_to_not_use_standard_nn_for_seq_task.PNG)
 - Recurrent neural network doesn't have either of the two mentioned problems.
 - Lets build a RNN that solves **name entity recognition** task:   
     ![](Images/02.png)
   - In this problem T<sub>x</sub> = T<sub>y</sub>. In other problems where they aren't equal, the RNN architecture may be different.
   - a<sup><0></sup> is usually initialized with zeros, but some others may initialize it randomly in some cases.
+  - A lot of papers and books write the same architecture this way:  
+  ![](Images/03.png)
+    - It's harder to interpreter. It's easier to roll this drawings to the unrolled version.
+  - In RNN architecture, each ouput is dependent on previous ouput and current state. i.e. the current output y&#770;<sup>\<t></sup> depends on the previous inputs and activations.
+    - Example : The y<sup><3></sup> will be predicted using not only x<sup><3></sup> but also the information from x<sup><1></sup> and x<sup><2></sup>.
+    ![](Images/rnn_architect_1.PNG)
   - There are three weight matrices here: W<sub>ax</sub>, W<sub>aa</sub>, and W<sub>ya</sub> with shapes:
     - W<sub>ax</sub>: (NoOfHiddenNeurons, n<sub>x</sub>)
-    - W<sub>aa</sub>: (NoOfHiddenNeurons, NoOfHiddenNeurons)
+    - W<sub>aa</sub>: (NoOfHiddenNeurons, NoOfHiddenNeurons); The weight matrix W<sub>aa</sub> is the memory the RNN is trying to maintain from the previous layers.
     - W<sub>ya</sub>: (n<sub>y</sub>, NoOfHiddenNeurons)
-- The weight matrix W<sub>aa</sub> is the memory the RNN is trying to maintain from the previous layers.
-- A lot of papers and books write the same architecture this way:  
-  ![](Images/03.png)
-  - It's harder to interpreter. It's easier to roll this drawings to the unrolled version.
-- In the discussed RNN architecture,  the current output y&#770;<sup>\<t></sup> depends on the previous inputs and activations.
-- Let's have this example 'He Said, "Teddy Roosevelt was a great president"'. In this example Teddy is a person name but we know that from the word **president** that came after Teddy not from **He** and **said** that were before it.
+- one weakness of RNN is that it only uses the information from elements earlier in sequence but not later in sequence to make prediction. In particular when predicting y<sup>3</sup> it doesn't use the information about words x<sup>4</sup>, x<sup>5</sup>, x<sup>6</sup>...
+  - Example : Let's take two sentenses
+  <br><br>![](Images/rnn_limitation.PNG)
+    - He Said, "Teddy Roosevelt was a great president"'. In this example Teddy is a person name but we know that from the word **president** that came after Teddy not from **He** and **said** that were before it.
+    - He Said, "Teddy bears are on sale"'. In this example Teddy is not a person name but we know this from the word **bears** that came after Teddy not from **He** and **said** that were before it.
+    - Given first three words( He Said, "Teddy), it is not possbile to say whether Teddy is part of a person name or not.
 - So limitation of the discussed architecture is that it can not learn from elements later in the sequence. To address this problem we will later discuss **Bidirectional RNN**  (BRNN).
 - Now let's discuss the forward propagation equations on the discussed architecture:   
     ![](Images/04.png)
