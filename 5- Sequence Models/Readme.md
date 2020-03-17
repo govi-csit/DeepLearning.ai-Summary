@@ -170,9 +170,9 @@ Here are the course summary as its given on the course [link](https://www.course
     - W<sub>ax</sub>: (NoOfHiddenNeurons, n<sub>x</sub>)
     - W<sub>aa</sub>: (NoOfHiddenNeurons, NoOfHiddenNeurons); The weight matrix W<sub>aa</sub> is the memory the RNN is trying to maintain from the previous layers.
     - W<sub>ya</sub>: (n<sub>y</sub>, NoOfHiddenNeurons)
-- one weakness of RNN is that it only uses the information from elements earlier in sequence but not later in sequence to make prediction. In particular when predicting y<sup>3</sup> it doesn't use the information about words x<sup>4</sup>, x<sup>5</sup>, x<sup>6</sup>...
+- one weakness of RNN is that it only uses the information from elements earlier in sequence but not later in sequence to make prediction. In particular when predicting y<sup><3></sup> it doesn't use the information about words x<sup><4></sup>, x<sup><5></sup>, x<sup><6></sup>...
   - Example : Let's take two sentenses
-  <br><br>![](Images/rnn_limitation.PNG)
+  <br>![](Images/rnn_limitation.PNG)
     - He Said, "Teddy Roosevelt was a great president"'. In this example Teddy is a person name but we know that from the word **president** that came after Teddy not from **He** and **said** that were before it.
     - He Said, "Teddy bears are on sale"'. In this example Teddy is not a person name but we know this from the word **bears** that came after Teddy not from **He** and **said** that were before it.
     - Given first three words( He Said, "Teddy), it is not possbile to say whether Teddy is part of a person name or not.
