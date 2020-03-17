@@ -69,6 +69,12 @@ Here are the course summary as its given on the course [link](https://www.course
 
 > Learn about recurrent neural networks. This type of model has been proven to perform extremely well on temporal data. It has several variants including LSTMs, GRUs and Bidirectional RNNs, which you are going to learn about in this section.
 
+### Introduction
+- In Traditional NN, each input-ouput is independent of other input-ouput, where as in RNN, current ouput is dependent on previous/past ouput and current state
+<br>![](Images/rrn_intro.PNG)
+- Example : Thre is a grammer associated with this sentence where each word is not independent of themself instead each word( like is, a, grea,..etc) is dependent on what came before it
+<br>![](Images/rnn_seq_dependent.PNG)
+
 ### Why sequence models
 - Sequence Models like RNN and LSTMs have greatly transformed learning on sequences in the past few years.
 - Examples of sequence data in applications:
@@ -81,12 +87,14 @@ Here are the course summary as its given on the course [link](https://www.course
   - Sentiment classification (**sequence to one**):
     - X: text sequence
     - Y: integer rating from one to five
+    <br>![](Images/sentiment_classfication.PNG)
   - DNA sequence analysis (**sequence to sequence**):
     - X: DNA sequence
     - Y: DNA Labels
   - Machine translation (**sequence to sequence**):
     - X: text sequence (in one language)
     - Y: text sequence (in other language)
+    <br>![](Images/machine_trans.PNG)
   - Video activity recognition (**sequence to one**):
     - X: video frames
     - Y: label (activity)
@@ -94,6 +102,12 @@ Here are the course summary as its given on the course [link](https://www.course
     - X: text sequence
     - Y: label sequence
     - Can be used by seach engines to index different type of words inside a text.
+    <br>![](Images/name_entity_recog.PNG)
+  - Word Predection (**sequence to word**):
+    - X: text sequence
+    - Y: word
+    <br>![](Images/word_predictor.PNG)
+  
 - All of these problems with different input and output (sequence or not) can be addressed as supervised learning with label data X, Y as the training set.
 
 ### Notation
