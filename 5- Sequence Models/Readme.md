@@ -187,6 +187,11 @@ Here are the course summary as its given on the course [link](https://www.course
   - [a<sup>\<t-1></sup>, x<sup>\<t></sup>] is a<sup>\<t-1></sup> and x<sup>\<t></sup> stacked vertically.
   - w<sub>a</sub> shape: (NoOfHiddenNeurons, NoOfHiddenNeurons + n<sub>x</sub>)
   - [a<sup>\<t-1></sup>, x<sup>\<t></sup>] shape: (NoOfHiddenNeurons + n<sub>x</sub>, 1)
+  - Example :
+    - let's say <br>a is 100 dimensional and x is 10,000 dimensional matrix then 
+  <br><b>w<sub>aa</sub></b> will be (100,100) dimensional matrix and <b>w<sub>ax</sub></b> will be (100,10100) dimensional matrix
+  <br>![](Images/rnn_forward_prop.PNG)
+  - The advantage of this notation is that rather than carrying around two parameter matrices : <b>w<sub>aa</sub></b> and <b>w<sub>ax</sub></b>, we can compress them into just one paramter <b>w<sub>a</sub></b> which will simplifies our notation when we develop more complex models
 
 ### Backpropagation through time
 - Let's see how backpropagation works with the RNN architecture.
