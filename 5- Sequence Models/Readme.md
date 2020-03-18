@@ -109,6 +109,7 @@ Here are the course summary as its given on the course [link](https://www.course
     <br>![](Images/word_predictor.PNG)
   
 - All of these problems with different input and output (sequence or not) can be addressed as supervised learning with label data X, Y as the training set.
+<br>![](Images/rnn_app.PNG)
 
 ### Notation
 - In this section we will discuss the notations that we will use through the course.
