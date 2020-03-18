@@ -205,6 +205,7 @@ Here are the course summary as its given on the course [link](https://www.course
 - Graph with losses:   
   ![](Images/08.png)
 - The backpropagation here is called **backpropagation through time** because we pass activation `a` from one sequence element to another like backwards in time.
+  ![](Images/backpropgation.PNG)
 
 ### Different types of RNNs
 - So far we have seen only one RNN architecture in which T<sub>x</sub> equals T<sub>Y</sub>. In some other problems, they may not equal so we need different architectures.
