@@ -234,13 +234,16 @@ Here are the course summary as its given on the course [link](https://www.course
   - **Pair** and **pear** sounds exactly the same, so how would a speech recognition application choose from the two.
   - That's where the language model comes in. It gives a probability for the two sentences and the application decides the best based on this probability.
 - The job of a language model is to give a probability of any given sequence of words.
+![](Images/language_modeling.PNG)
 - **How to build language models with RNNs?**
   - The first thing is to get a **training set**: a large corpus of target language text.
   - Then tokenize this training set by getting the vocabulary and then one-hot each word.
   - Put an end of sentence token `<EOS>` with the vocabulary and include it with each converted sentence. Also, use the token `<UNK>` for the unknown words.
+ <br><br>![](Images/lm_training.PNG)
 - Given the sentence "Cats average 15 hours of sleep a day. `<EOS>`"
   - In training time we will use this:   
     ![](Images/13.png)
+    <br><br>![](Images/rnn_language_model.PNG)
   - The loss function is defined by cross-entropy loss:   
     ![](Images/14.png)
     - `i`  is for all elements in the corpus, `t` - for all timesteps.
